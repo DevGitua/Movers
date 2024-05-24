@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movers and Transportation Booking</title>
+</head>
+<body>
+    <h1>Available Trucks</h1>
+    <ul>
+        {% for truck in trucks %}
+            <li>{{ truck.model }} ({{ truck.license_plate }}) - Capacity: {{ truck.capacity }} tons</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'book_truck' %}">Book a Truck</a>
+</body>
+</html>
